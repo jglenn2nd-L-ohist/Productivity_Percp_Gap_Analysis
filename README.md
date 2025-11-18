@@ -1,28 +1,69 @@
-https://public.tableau.com/views/JG_Capstone/SocialMediaandSleepvsProductivityGap?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+# Productivity Perception Gap Analysis
 
+Role: Junior Data Analyst — Portfolio project
 
+Project summary
+This is a compact case study exploring the gap between perceived productivity and measured productivity using event-level activity logs. The goal is to demonstrate the end-to-end data analysis process: data ingestion (SQL), cleaning & analysis (R), and storytelling & dashboards (Tableau).
 
-The Productivity Perception Gap: Screen Time, Sleep, and Self-Assessment
-1. Business Question
-This project aimed to investigate the relationship between night-time habits (Screen Time before bed and total Sleep Hours) and the accuracy of self-assessed productivity. The core question was: Do poor sleep habits lead individuals to significantly over- or under-estimate their actual daily output?
-2. Methodology: An End-to-End Analytical Workflow
-This analysis was performed using a sequential, three-tool workflow, demonstrating proficiency across the standard data analyst stack:
-SQL (Initial Cleaning & Structuring): The raw "Social Media vs. Productivity" dataset was imported, where initial data quality checks were conducted, and data types were standardized.
-R Studio (Feature Engineering & Statistical Validation):
-Feature Creation: The target variable, Productivity Gap (calculated as Perceived Productivity Score – Actual Productivity Score), was engineered. This variable quantified the self-perception bias (a positive value indicates over-estimation).
-Multiple Linear Regression (MLR): An MLR model was run to test the statistical significance of categorized Screen Time and Sleep Hours on the Productivity Gap.
-Tableau (Visualization & Communication): The final, validated results were visualized to communicate the core finding and the outcomes of the hypothesis test.
-3. Key Findings
-Finding 1: The Significant Baseline of Over-Estimation
-The single most significant finding was the baseline level of self-perception bias.
-Result: The model's (Intercept) was $0.609$ ($p < 2e-16$), meaning the average person in the dataset, regardless of their sleep or screen time habits, over-estimates their productivity by approximately $0.61$ points on a 10-point scale.
-Insight: This suggests a universal bias in self-assessment, where human perception of productivity is generally inflated compared to objective output. This highly significant finding is the core takeaway of the analysis.
-Finding 2: Screen Time and Sleep are Not Significant Drivers
-The hypothesis that poor sleep habits predict the productivity gap was not supported by the data.
-Result: All coefficients for the screen_time_category and sleep_hours_category variables had high $p$-values (ranging from $0.221$ to $0.931$).
-Insight: This demonstrates that, for this population, the difference in the amount of screen time before bed or the duration of sleep does not statistically influence the degree to which a person over-estimates or under-estimates their productivity. The factor driving the gap lies outside of these variables.
-4. Conclusion & Recommendations
-While the independent variables of screen time and sleep did not prove to be statistically meaningful predictors of the Productivity Gap, the analysis successfully validated a strong, inherent bias toward over-estimation in the general population.
-Recommendations for Next Steps:
-Investigate Deeper Factors: The low Adjusted R-squared ($\approx 0.00004$) suggests that a vast majority of the variance in the Gap is driven by unmeasured variables. Further analysis should explore factors like Stress Level, Job Satisfaction, or Day of the Week to find a stronger predictor.
-Focus on Intervention: Since the baseline bias is significant, any intervention aimed at improving self-assessment accuracy should address the psychological tendency to over-estimate, rather than exclusively focusing on habit correction.
+Key skills demonstrated
+- Data cleaning, transformation, and exploratory analysis (R, tidyverse)
+- SQL for extraction and basic aggregation
+- Visualization & dashboard design (Tableau)
+- Statistical comparison and basic hypothesis thinking
+- Reproducible analysis and documentation
+
+Tools & technologies
+- R (tidyverse, lubridate, DBI)
+- SQL (any RDBMS; examples use SQLite for reproducibility)
+- Tableau for dashboards
+- Git & GitHub for version control and portfolio hosting
+
+Highlights / Showcase
+- Clear data pipeline: raw -> cleaned -> analysis -> visualization
+- Simple reproducible scripts you can run locally (see R/01-data-prep.R and R/02-analysis.R)
+- Small sample dataset included so reviewers can run the pipeline in minutes
+- Screenshots of the Tableau dashboard are included under docs/figures (replace with your images)
+
+One-line takeaway
+In this sample analysis perceived productivity tends to be higher than measured productivity, with the biggest gaps in administrative work and meetings (see results and dashboards).
+
+How to run (quick)
+1. Clone:
+   git clone https://github.com/jglenn2nd-L-ohist/Productivity_Percp_Gap_Analysis.git
+   git checkout -b setup/jr-portfolio
+2. Install R packages:
+   install.packages(c("tidyverse", "lubridate", "DBI", "RSQLite"))
+3. Run scripts:
+   Rscript R/01-data-prep.R
+   Rscript R/02-analysis.R
+4. Open docs/figures for sample images, or open your Tableau workbook from tableau/ if provided.
+
+Repository structure
+- README.md                      : This file — project overview & quick start
+- LICENSE                        : MIT license
+- .gitignore                     : Ignore outputs and large data
+- data/sample/                   : Small sample dataset to reproduce results
+- R/                             : Reproducible R scripts (preparation + analysis)
+- sql/                           : Example SQL queries (if applicable)
+- tableau/                       : Tableau workbook or notes
+- docs/figures/                  : Dashboard screenshots and static exports
+- .github/                       : ISSUE & PR templates
+- outputs/                       : Generated outputs (gitignored)
+
+What I (the author) did
+- Created a minimal reproducible pipeline and a sample dataset so reviewers can run the analysis in minutes.
+- Wrote an analysis script that outputs a simple summary table comparing perceived vs measured productivity by activity type.
+
+What reviewers should notice (portfolio framing)
+- Clear role and responsibilities: explain in PR or project page which parts you built (data cleaning, analysis, dashboard).
+- Highlight impact: describe a business question (e.g., where to invest time-savings) and state the key result and next steps.
+- Keep visuals simple and annotated — a single dashboard that answers one primary question is stronger than many unfocused charts.
+
+Suggestions to make this portfolio-ready
+- Add 1–2 polished screenshots or a short GIF (3–8s) of the Tableau dashboard in docs/figures and embed them in this README.
+- Add a short “What I learned” section and a bullet list of technical decisions (packages, modeling choices).
+- Write a one-paragraph “Method” section describing data sources, cleaning choices, and how measured productivity was calculated.
+- Add a short non-technical executive summary at the top so hiring managers can quickly scan the result.
+
+Contact / Author
+Author: jglenn2nd-L-ohist — GitHub profile: https://github.com/jglenn2nd-L-ohist

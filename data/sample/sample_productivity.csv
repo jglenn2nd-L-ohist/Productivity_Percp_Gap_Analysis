@@ -1,0 +1,5 @@
+timestamp,user_id,perceived_productivity,measured_productivity,activity_type
+2025-11-01 09:00:00,1001,80,70,writing
+2025-11-01 10:15:00,1002,60,55,meeting
+2025-11-01 11:30:00,1001,90,85,coding
+2025-11-02 14:00:00,1003,50,40,administration
