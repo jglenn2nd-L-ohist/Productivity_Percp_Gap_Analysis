@@ -1,4 +1,3 @@
-https://public.tableau.com/views/JG_Capstone/SocialMediaandSleepvsProductivityGap?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 The Productivity Perception Gap: Screen Time, Sleep, and Self-Assessment
 1. Business Question
