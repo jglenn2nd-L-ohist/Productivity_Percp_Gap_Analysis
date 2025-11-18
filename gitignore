@@ -1,0 +1,22 @@
+# R
+.Rhistory
+.RData
+.Rproj.user
+.Ruserdata
+.Rhistory
+.Rapp.history
+
+# RStudio
+.Rproj.user/
+
+# Data files 
+data/raw/
+data/large/
+
+# Outputs / caches
+outputs/
+cache/
+
+# Tableau 
+*.twb
+*.twbx
