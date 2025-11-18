@@ -1,0 +1,56 @@
+-- Reveal any entries that have NULL values in the relevant categories
+SELECT
+    COUNT(*) AS total_rows,
+    SUM(CASE WHEN screen_time_before_sleep IS NULL THEN 1 ELSE 0 END) AS missing_screen_time,
+    SUM(CASE WHEN sleep_hours IS NULL THEN 1 ELSE 0 END) AS missing_sleep_hours,
+    SUM(CASE WHEN perceived_productivity_score IS NULL THEN 1 ELSE 0 END) AS missing_perceived_prod,
+    SUM(CASE WHEN actual_productivity_score IS NULL THEN 1 ELSE 0 END) AS missing_actual_prod
+FROM
+    `avian-destiny-473116-a6.soc_med_v_prod.productivity_index`
+
+-- No entries can back as NULL
+
+
+-- Confirm sleep hours are within reason (<1 or >16)
+-- Flag or filter out impossible sleep hours (e.g., less than 1 hour or more than 16 hours)
+SELECT
+    *
+FROM
+    `avian-destiny-473116-a6.soc_med_v_prod.productivity_index`
+WHERE
+    sleep_hours < 1 OR sleep_hours > 16;
+
+-- All fields fall within reasonable range
+
+-- Check for productivity scores outside the expected 1-10 range (or whatever the dataset specifies)
+SELECT
+    perceived_productivity_score,
+    actual_productivity_score
+FROM
+    `avian-destiny-473116-a6.soc_med_v_prod.productivity_index`
+WHERE
+    perceived_productivity_score NOT BETWEEN 1 AND 10
+    OR actual_productivity_score NOT BETWEEN 1 AND 10;
+
+-- Update/Correct the invalid scores (e.g., setting them to NULL)
+UPDATE
+    `avian-destiny-473116-a6.soc_med_v_prod.productivity_index`
+SET
+    perceived_productivity_score = NULL
+WHERE
+    perceived_productivity_score NOT BETWEEN 1 AND 10;
+
+-- ADD column to reveal productivity gap
+ALTER TABLE
+    `avian-destiny-473116-a6.soc_med_v_prod.productivity_index`
+ADD COLUMN
+    productivity_gap NUMERIC;
+
+-- POPULATE column productivity gap & UPDATE table
+UPDATE
+  `avian-destiny-473116-a6`.`soc_med_v_prod`.`productivity_index`
+SET
+  productivity_gap = CAST(perceived_productivity_score - actual_productivity_score AS NUMERIC)
+WHERE
+  perceived_productivity_score IS NOT NULL
+  AND actual_productivity_score IS NOT NULL;
