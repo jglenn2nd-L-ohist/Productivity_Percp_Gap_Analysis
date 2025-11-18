@@ -9,21 +9,10 @@
 # RStudio
 .Rproj.user/
 
-# macOS
-.DS_Store
-
-# Python (if used)
-__pycache__/
-*.pyc
-
-# Data files (if you keep raw data locally)
-data/raw/
-data/large/
-
 # Outputs / caches
 outputs/
 cache/
 
-# Tableau (workbook backups)
+# Tableau 
 *.twb
 *.twbx
