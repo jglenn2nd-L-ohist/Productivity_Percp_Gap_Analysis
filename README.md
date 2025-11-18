@@ -50,20 +50,5 @@ Repository structure
 - .github/                       : ISSUE & PR templates
 - outputs/                       : Generated outputs (gitignored)
 
-What I (the author) did
-- Created a minimal reproducible pipeline and a sample dataset so reviewers can run the analysis in minutes.
-- Wrote an analysis script that outputs a simple summary table comparing perceived vs measured productivity by activity type.
-
-What reviewers should notice (portfolio framing)
-- Clear role and responsibilities: explain in PR or project page which parts you built (data cleaning, analysis, dashboard).
-- Highlight impact: describe a business question (e.g., where to invest time-savings) and state the key result and next steps.
-- Keep visuals simple and annotated — a single dashboard that answers one primary question is stronger than many unfocused charts.
-
-Suggestions to make this portfolio-ready
-- Add 1–2 polished screenshots or a short GIF (3–8s) of the Tableau dashboard in docs/figures and embed them in this README.
-- Add a short “What I learned” section and a bullet list of technical decisions (packages, modeling choices).
-- Write a one-paragraph “Method” section describing data sources, cleaning choices, and how measured productivity was calculated.
-- Add a short non-technical executive summary at the top so hiring managers can quickly scan the result.
-
 Contact / Author
 Author: jglenn2nd-L-ohist — GitHub profile: https://github.com/jglenn2nd-L-ohist
