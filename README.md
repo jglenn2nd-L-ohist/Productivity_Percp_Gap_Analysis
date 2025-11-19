@@ -26,6 +26,9 @@ Highlights / Showcase
 
 One-line takeaway
 In this sample analysis perceived productivity tends to be higher than measured productivity, with the biggest gaps in administrative work and meetings (see results and dashboards).
+<img width="2008" height="1606" alt="Social Media and Sleep vs Productivity Gap (2)" src="https://github.com/user-attachments/assets/79cfefa6-7948-4099-99d7-b7ff11e2a684" />
+
+
 
 How to run (quick)
 1. Clone:
@@ -52,3 +55,5 @@ Repository structure
 
 Contact / Author
 Author: jglenn2nd-L-ohist — GitHub profile: https://github.com/jglenn2nd-L-ohist
+
+
