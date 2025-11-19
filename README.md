@@ -26,3 +26,6 @@ While the independent variables of screen time and sleep did not prove to be sta
 Recommendations for Next Steps:
 Investigate Deeper Factors: The low Adjusted R-squared ($\approx 0.00004$) suggests that a vast majority of the variance in the Gap is driven by unmeasured variables. Further analysis should explore factors like Stress Level, Job Satisfaction, or Day of the Week to find a stronger predictor.
 Focus on Intervention: Since the baseline bias is significant, any intervention aimed at improving self-assessment accuracy should address the psychological tendency to over-estimate, rather than exclusively focusing on habit correction.
+
+
+Contact
