@@ -1,3 +1,10 @@
+I am an aspiring Jr Data Analyist
+This project is for my portfolio.
+In this case study, I wanted to see if there was any correlation between someone's nightly hygeine & the effects it had on their perceived productivity.
+The data set is a set from Kaggle entitled  "The Social Media vs Productivity" data set, who's author is Mahdi Mashayekhi.
+
+
+
 
 The Productivity Perception Gap: Screen Time, Sleep, and Self-Assessment
 1. Business Question
