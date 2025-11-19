@@ -1,6 +1,3 @@
-https://public.tableau.com/views/JG_Capstone/SocialMediaandSleepvsProductivityGap?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
-
-
 
 The Productivity Perception Gap: Screen Time, Sleep, and Self-Assessment
 1. Business Question
@@ -21,7 +18,10 @@ Finding 2: Screen Time and Sleep are Not Significant Drivers
 The hypothesis that poor sleep habits predict the productivity gap was not supported by the data.
 Result: All coefficients for the screen_time_category and sleep_hours_category variables had high $p$-values (ranging from $0.221$ to $0.931$).
 Insight: This demonstrates that, for this population, the difference in the amount of screen time before bed or the duration of sleep does not statistically influence the degree to which a person over-estimates or under-estimates their productivity. The factor driving the gap lies outside of these variables.
-4. Conclusion & Recommendations
+<img width="2008" height="1606" alt="Social Media and Sleep vs Productivity Gap (2)" src="https://github.com/user-attachments/assets/73adb2b2-6b79-45b8-a525-2fd5e10f12a7" />
+
+
+5. Conclusion & Recommendations
 While the independent variables of screen time and sleep did not prove to be statistically meaningful predictors of the Productivity Gap, the analysis successfully validated a strong, inherent bias toward over-estimation in the general population.
 Recommendations for Next Steps:
 Investigate Deeper Factors: The low Adjusted R-squared ($\approx 0.00004$) suggests that a vast majority of the variance in the Gap is driven by unmeasured variables. Further analysis should explore factors like Stress Level, Job Satisfaction, or Day of the Week to find a stronger predictor.
