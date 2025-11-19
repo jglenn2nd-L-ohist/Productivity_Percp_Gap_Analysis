@@ -1,4 +1,5 @@
 # 1. Load Libraries
+install.packages("tidtverse")
 library(tidyverse) # Includes dplyr and ggplot2 for data manipulation and visualization
 
 # NOTE: The data 'productivity_analysis_sql_clean.csv' is assumed to be 
@@ -8,13 +9,7 @@ df_raw <- read_csv("productivity_analysis_sql_clean.csv")
 # 2. Feature Engineering & Categorization
 df_final_analysis <- df_raw %>%
   
-  # --- 2.1 Create the KEY METRIC: Productivity Gap (Perceived - Actual) ---
-  # Positive value = Over-estimated productivity (Perceived > Actual)
-  mutate(
-    productivity_gap = perceived_productivity_score - actual_productivity_score
-  ) %>%
-  
-  # --- 2.2 Categorize Screen Time Before Bed ---
+  # --- 2.1 Categorize Screen Time Before Bed ---
   mutate(
     screen_time_category = case_when(
       screen_time_before_sleep <= 0.5 ~ "Low Screen Time (<= 30 min)",
@@ -24,7 +19,7 @@ df_final_analysis <- df_raw %>%
     )
   ) %>%
   
-  # --- 2.3 Categorize Sleep Hours ---
+  # --- 2.2 Categorize Sleep Hours ---
   mutate(
     sleep_hours_category = case_when(
       sleep_hours < 6 ~ "Short Sleep (< 6 hrs)",
